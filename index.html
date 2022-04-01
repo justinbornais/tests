@@ -41,6 +41,10 @@
         <li class="dir"><b><a href="Video Games">📁 Video Games/</a></b></li>
         <br />
         <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op62.pdf">📄 IMSLP03247-Scharwenka_album-young_op62.pdf</a></li>
+        <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op63.pdf">📄 IMSLP03247-Scharwenka_album-young_op63.pdf</a></li>
+        <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op64.pdf">📄 IMSLP03247-Scharwenka_album-young_op64.pdf</a></li>
+        <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op65.pdf">📄 IMSLP03247-Scharwenka_album-young_op65.pdf</a></li>
+        <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op66.pdf">📄 IMSLP03247-Scharwenka_album-young_op66.pdf</a></li>
     </ul>
     
     <script>
@@ -50,8 +54,14 @@
             
         if(Android) {
             res = "Device is Android Phone";
+            for(var i = 0;i < files.length;i++) {
+                files[i].childNodes[0].href = "https://docs.google.com/viewerng/viewer?url=" + files[i].childNodes[0].href;
+                document.write(files[i].childNodes[0].href)
+            }
         }
         document.write(res)
+        var files = document.getElementsByClassName("file");
+        
     </script>
 </body>
 </html>
