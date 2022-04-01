@@ -46,21 +46,22 @@
         <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op65.pdf">📄 IMSLP03247-Scharwenka_album-young_op65.pdf</a></li>
         <li class="file"><a target="_blank" href="IMSLP03247-Scharwenka_album-young_op66.pdf">📄 IMSLP03247-Scharwenka_album-young_op66.pdf</a></li>
     </ul>
+    <p id="test"></p>
     
     <script>
         var res = "Device is not Android Phone";
         var userAgent = navigator.userAgent.toLowerCase();
         var Android = userAgent.indexOf("android") > -1;
+        var files = document.getElementsByClassName("file");
             
         if(Android) {
             res = "Device is Android Phone";
             for(var i = 0;i < files.length;i++) {
                 files[i].childNodes[0].href = "https://docs.google.com/viewerng/viewer?url=" + files[i].childNodes[0].href;
-                document.write(files[i].childNodes[0].href)
+                
             }
         }
-        document.write(res)
-        var files = document.getElementsByClassName("file");
+        document.getElementById("test").innerHTML = (files[0].childNodes[0].href);
         
     </script>
 </body>
